@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup name="Person">
-import { type PersonInter } from "@/types"; //引入类型约束时要加type
+import { type PersonInter } from "../types"; //引入类型约束时要加type
 
 let Person: PersonInter = { id: "qwefv", name: "ee", age: 18 }; //用PersonInter约束Person的数据结构
 
