@@ -1,0 +1,179 @@
+/* public/css/bootstrap.css */
+/* 迷你 Bootstrap：重点支持 container/row/col 栅格 + list-group 等课件常用样式 */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", sans-serif;
+  color: #212529;
+  background: #fff;
+}
+
+a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* -------- container -------- */
+.container,
+.container-fluid {
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+/* -------- grid (关键：让左右并排) -------- */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+[class^="col"],
+[class*=" col"] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* 常用列（课件一般就用到这几个） */
+.col {
+  flex: 1 0 0%;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.6667%;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.3333%;
+}
+
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+/* 兼容 Bootstrap3 栅格写法：col-xs-*, col-md-*, col-lg-*, col-xl-* */
+[class*="col-xs-"],
+[class*="col-md-"],
+[class*="col-lg-"],
+[class*="col-xl-"] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* width: 2/12, 10/12（你要右边更宽就用这组） */
+.col-xs-2, .col-md-2, .col-lg-2, .col-xl-2 { flex: 0 0 auto; width: 16.6667%; }
+.col-xs-10, .col-md-10, .col-lg-10, .col-xl-10 { flex: 0 0 auto; width: 83.3333%; }
+
+/* （可选）如果你还想用 1/11 或者保留 3/9，也顺手补上 */
+.col-xs-1, .col-md-1, .col-lg-1, .col-xl-1 { flex: 0 0 auto; width: 8.3333%; }
+.col-xs-11, .col-md-11, .col-lg-11, .col-xl-11 { flex: 0 0 auto; width: 91.6667%; }
+
+.col-xs-3, .col-md-3, .col-lg-3, .col-xl-3 { flex: 0 0 auto; width: 25%; }
+.col-xs-9, .col-md-9, .col-lg-9, .col-xl-9 { flex: 0 0 auto; width: 75%; }
+
+
+/* 让小屏自动上下（接近 Bootstrap 的体验） */
+@media (max-width: 768px) {
+
+  .col-3,
+  .col-4,
+  .col-6,
+  .col-8,
+  .col-9 {
+    width: 100%;
+  }
+}
+
+/* -------- typography / spacing -------- */
+.text-center {
+  text-align: center;
+}
+
+.my-5 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #dee2e6;
+  margin: 1rem 0;
+}
+
+/* -------- list-group -------- */
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin: 0;
+  /* 避免挤出额外空白 */
+  border-radius: 0.25rem;
+}
+
+.list-group-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #212529;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.list-group-item+.list-group-item {
+  border-top: 0;
+}
+
+.list-group-item-action {
+  cursor: pointer;
+}
+
+.list-group-item-action:hover {
+  background-color: #f8f9fa;
+}
+
+.list-group-item-action:active {
+  background-color: #e9ecef;
+}
